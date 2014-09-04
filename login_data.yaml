@@ -1,0 +1,7 @@
+#settings for input login data. REMEMBER: change number for each new test!!!
+name:
+    - Vasya5
+email:
+    - vasya_test5@mail.com
+password:
+    - Vasya@5
