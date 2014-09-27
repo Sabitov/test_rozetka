@@ -8,6 +8,11 @@ class BaseElement():
         self.driver = driver
         self.locator_type = locator_type
 
+    def change_find_by_param(self,new_locator, new_locator_type):
+        self.locator = new_locator
+        self.locator_type = new_locator_type
+        return self
+
     def find_by(self):
         #locator_type must be in (id,name,class,xpath)
         if self.locator_type == "id":

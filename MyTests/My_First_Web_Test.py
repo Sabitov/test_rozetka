@@ -16,11 +16,14 @@ class MyTestCase(unittest.TestCase):
         self.driver.close()
 
     def test1(self):
-        home = HomePage(self.driver)
-        home.open()
-        login = home.find_login()
-        cabinet = login.login_try()
-        cabinet.shoot_cabinet_name()
+        home_page = HomePage(self.driver)
+        home_page.open()
+        home_page.find_login()
+        login_page = LoginPage(self.driver)
+        login_page.login_try()
+        my_cabinet_page = MyCabinetPage(self.driver,login_page.data)
+        my_cabinet_page.shoot_cabinet_name()
+
 
 if __name__ == '__main__':
     unittest.main()
